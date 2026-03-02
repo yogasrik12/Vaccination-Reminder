@@ -1,0 +1,54 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Vaccine Name"/>
+
+        <EditText
+            android:id="@+id/editType"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Type"/>
+
+        <EditText
+            android:id="@+id/editTaken"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Taken Date"/>
+
+        <EditText
+            android:id="@+id/editDue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Due Date"/>
+
+        <EditText
+            android:id="@+id/editNotes"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:hint="Notes"/>
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Update"/>
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Delete"
+            android:backgroundTint="#F44336"/>
+    </LinearLayout>
+</ScrollView>

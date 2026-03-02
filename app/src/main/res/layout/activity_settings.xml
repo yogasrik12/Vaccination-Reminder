@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FE">
+
+    <!-- ================= SCROLL AREA ================= -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNav">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- ================= HEADER ================= -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="@drawable/bg_settings_header"
+                android:padding="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtSettingsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Settings ⚙️"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- ================= PROFILE CARD ================= -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_card"
+                android:padding="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Avatar -->
+                <TextView
+                    android:id="@+id/txtAvatar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="RS"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:background="@drawable/bg_avatar_circle_blue"/>
+
+                <!-- Name + Details -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:id="@+id/txtUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rahul Sharma"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/txtUserDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="rahul_sharma · User #U001"
+                        android:textSize="12sp"
+                        android:textColor="#777777"/>
+                </LinearLayout>
+
+                <!-- Edit -->
+                <TextView
+                    android:id="@+id/txtEditProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit ›"
+                    android:textColor="#1A73E8"
+                    android:textStyle="bold"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+
+            <!-- ================= NOTIFICATIONS TITLE ================= -->
+            <TextView
+                android:id="@+id/txtNotificationsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NOTIFICATIONS"
+                android:textColor="#1A73E8"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"/>
+
+            <!-- Push Notifications Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_card"
+                android:padding="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_icon_light"
+                    android:padding="8dp"
+                    android:src="@android:drawable/ic_dialog_info"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:id="@+id/txtPushTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Push Notifications"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/txtPushSub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vaccine reminders"
+                        android:textSize="12sp"
+                        android:textColor="#777777"/>
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/switchNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"/>
+            </LinearLayout>
+
+            <!-- ================= ACCOUNT TITLE ================= -->
+            <TextView
+                android:id="@+id/txtAccountTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ACCOUNT"
+                android:textColor="#1A73E8"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:layout_marginStart="16dp"/>
+
+            <!-- Change Password -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_card"
+                android:padding="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_icon_light"
+                    android:padding="8dp"
+                    android:src="@android:drawable/ic_lock_lock"/>
+
+                <TextView
+                    android:id="@+id/txtChangePassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:text="Change Password"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <!-- ================= APP TITLE ================= -->
+            <TextView
+                android:id="@+id/txtAppTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="APP"
+                android:textColor="#1A73E8"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:layout_marginStart="16dp"/>
+
+            <!-- About App -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_card"
+                android:padding="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_icon_light"
+                    android:padding="8dp"
+                    android:src="@android:drawable/ic_menu_info_details"/>
+
+                <TextView
+                    android:id="@+id/txtAboutApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="About App"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ================= BOTTOM NAV ================= -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:weightSum="4"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/home2"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🏠\nHome"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="💉\nVaccines"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🔔\nAlerts"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="⚙️\nSettings"
+            android:gravity="center"
+            android:textColor="#1A73E8"/>
+    </LinearLayout>
+
+</RelativeLayout>
